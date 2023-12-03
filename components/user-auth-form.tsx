@@ -84,7 +84,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            Sign In with Email
+            Sign In with Email DOES NOT WORK YET
           </button>
         </div>
       </form>
@@ -112,7 +112,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         ) : (
           <Icons.gitHub className="mr-2 h-4 w-4" />
         )}{" "}
-        Github
+        Github NOT IMPLEMENTED
       </button>
     </div>
   )

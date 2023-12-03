@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
+import { UserButton } from "@clerk/nextjs";
+
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -22,13 +24,14 @@ export default async function MarketingLayout({
             <Link
               href="/login"
               className={cn(
-                buttonVariants({ variant: "secondary", size: "sm" }),
+                buttonVariants({ variant: "ghost", size: "sm" }),
                 "px-4"
               )}
             >
-              Login
+              Login NOT IMPLEMENTED
             </Link>
           </nav>
+          <UserButton afterSignOutUrl="/"/>
         </div>
       </header>
       <main className="flex-1">{children}</main>
