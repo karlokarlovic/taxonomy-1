@@ -79,3 +79,23 @@ model Post {
 
   @@map("posts")
 }
+
+model SynFunc {
+  id                        String    @id @unique @default(cuid())
+  Parent                    String?   @unique
+  Child                     String?
+  Grandchild                String?
+  Greatgrandchild           String?
+  Greatgreatgrandchild      String?
+  Greatgreatgreatgrandchild String?
+  Title                     String
+  Link                      String
+  LongDescription           String?
+  SummaryDescription        String?
+  KingText                  String?
+  KingLinkParent            SynFunc[] @relation("FuncLink")
+  KingLinkChild             SynFunc[] @relation("FuncLink")
+  OriginalNumber            String?
+
+  @@map("synFunctions")
+}
