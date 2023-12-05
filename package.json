@@ -2,8 +2,9 @@
   "name": "taxonomy",
   "version": "0.2.0",
   "private": true,
+  "type": "module",
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.js"
   },
   "author": {
     "name": "shadcn",
