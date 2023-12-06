@@ -96,6 +96,17 @@ model SynFunc {
   ParentNode         SynFunc[] @relation("FuncLink")
   ChildNode          SynFunc[] @relation("FuncLink")
   OriginalNumber     String?
+  GroupingID         String?
 
   @@map("synFunctions")
 }
+
+// may possibly make a new object to link all linked nodes in a group
+// model SynFuncGroup {
+//   id                 String    @id @unique @default(cuid())
+//   GroupIDString      String?
+//   ParentNode         SynFuncGroup[] @relation("GroupLink")
+//   ChildNodes         SynFuncGroup[] @relation("GroupLink")
+
+//   @@map("synFuncGroups")
+// }

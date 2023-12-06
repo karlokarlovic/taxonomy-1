@@ -22,5 +22,9 @@ export const marketingConfig: MarketingConfig = {
       title: "Synergetic Functions",
       href: "/synfun",
     },
+    {
+      title: "TableTest",
+      href: "/tabletest",
+    },
   ],
 }
